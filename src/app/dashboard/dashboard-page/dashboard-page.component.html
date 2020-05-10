@@ -1,0 +1,13 @@
+<div>
+
+    <div id="actions">
+        <button class="btn btn-click" (click)="addTile('<dashboard-tile></dashboard-tile>')">Add title</button>
+        <button class="btn btn-click" (click)="addTile('<dashboard-content></dashboard-content>')">Add content</button>
+        <button class="btn btn-click" (click)="addTile('<dashboard-table></dashboard-table>')">Add table</button>
+    </div>
+
+    <div class="row" [innerHtml]="content">
+
+    </div>
+
+</div>
