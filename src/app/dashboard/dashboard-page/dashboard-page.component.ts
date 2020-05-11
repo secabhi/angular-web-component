@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -9,9 +10,16 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class DashboardPageComponent {
   content: any;
   tileData = ['one', 'two', 'three'];
-  constructor(private domSanitizer: DomSanitizer) {}
+  constructor(
+    private domSanitizer: DomSanitizer,
+    private httpservice: HttpServiceService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.httpservice.tileData.subscribe((data) => {
+      console.log(data);
+    });
+  }
 
   addTile(ele): void {
     this._add(ele);

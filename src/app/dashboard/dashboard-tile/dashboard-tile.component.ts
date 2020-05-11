@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-dashboard-tile',
@@ -10,7 +11,7 @@ export class DashboardTileComponent implements OnInit {
   @Output() updateData = new EventEmitter();
   text: any;
 
-  constructor() {}
+  constructor(private httpservice: HttpServiceService) {}
 
   ngOnInit(): void {
     console.log(this.data);
@@ -20,6 +21,7 @@ export class DashboardTileComponent implements OnInit {
     this.text = e.target.value;
   }
   updateTextData() {
-    this.updateData.emit({ data: this.text });
+    //this.updateData.emit({ data: this.text });
+    this.httpservice.getData();
   }
 }

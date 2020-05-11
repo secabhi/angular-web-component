@@ -7,6 +7,7 @@ import { createCustomElement } from '@angular/elements';
 import { DasboardTableModule } from './dashboard/dasboard-table/dasboard-table.module';
 import { DashboardContentModule } from './dashboard/dashboard-content/dashboard-content.module';
 import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [DashboardPageComponent],
@@ -15,6 +16,7 @@ import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.m
     DasboardTableModule,
     DashboardContentModule,
     DashboardTileModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [DashboardPageComponent],
