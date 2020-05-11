@@ -17,7 +17,7 @@ import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.m
     DashboardTileModule,
   ],
   providers: [],
-  //bootstrap: [AppComponent]
+  bootstrap: [DashboardPageComponent],
   entryComponents: [DashboardPageComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
